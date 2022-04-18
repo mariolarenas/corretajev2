@@ -1,0 +1,245 @@
+/* Paleta de colores a utilizar en esta web
+
+https://colorhunt.co/palette/1c658c398ab9d8d2cbeeeeee
+
+*/
+body {
+    text-align: center;
+    font-family: 'Coming Soon', cursive;
+    font-family: 'Open Sans', sans-serif;
+    color: #000000;
+    background-color: #EEEEEE;
+    margin: 0;
+
+}
+
+/*
+1em = 16px
+body {padding: 2em}      Todos los rellenos valen 2em (top, right, botton, left)
+body {padding: 1em 2em}  Superior e inferior = 1em, Izquierdo y derecho = 2em 
+body {padding: 1em 2em 3em}  Superior = 1em, derecho e izquierda = 2em, inferior = 3em
+body {padding: 1em 2em 3em 4em}  top = 1em, right = 2em, bootom = 3em, left = 4em
+*/
+
+body * {
+    margin: 0; 
+    border: 0;
+    padding: 0;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 4.75em;
+    margin-bottom: 0.25em;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 2.5em;
+}
+
+h3 {
+
+    font-size: 2em;
+}
+
+h4 {
+    
+    font-size: 1.75em;
+}
+
+h5 {
+    
+    font-size: 1.75em;
+}
+
+.subtitulo, h4, h5 {
+    font-weight: 400;
+}
+
+.csvg {
+    padding-top: 0%;
+    padding-bottom: 0%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+
+#seccion2 {
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+
+#seccion3 {
+    margin-top:-1%;
+    margin-bottom: 0%;
+    
+}
+
+.seccion3 {
+    text-align: left;
+    background: #1C658C;
+    color: #EEEEEE;
+    padding: 3.125rem;
+    white-space: nowrap;
+}
+
+#seccion4 h2{
+    margin: 1em auto;
+}
+
+section, footer {
+    margin-top: 4.5rem;
+}
+
+footer {
+    padding: 3.125rem;
+}
+
+.f_oscuro {
+ background: #1C658C ;
+}
+
+.f_oscuro a {
+    color: #EEEEEE;
+    text-decoration: none;
+}
+
+.centrado {
+    width: 75%;
+    margin: 0 auto;
+}
+
+nav{
+    text-align: left;
+    padding: 1.25rem 4rem;
+    position: fixed;
+    width: 100vw;
+    margin-left: auto;
+}
+
+nav ul{
+    list-style-type: none;
+    float: right;
+    padding-right: 10em;
+}
+
+nav ul li{
+    display: inline-block;
+    margin: 0 1.5em;
+    vertical-align: middle;
+}
+
+.logo {
+    width: 2em;
+}
+
+.promociones {
+    width: 30%;
+   
+}
+
+.promociones a{
+    text-decoration: none;
+}
+
+.promociones img{
+    width: 75%;
+    height: 20rem;
+}
+
+img {
+    display: inline-block;
+}
+
+footer i {
+    margin: 0 0.25em 0.5em 0.25em;
+}
+
+/********* Fuera de clase ************/
+
+/*
+se añade la clase "hero-section" a la secion1 en el html parta agregar una imagen de fondo 
+y se baja una imagen que se llamara en este ejemplo hero-section.jpg
+agregar target="_blank" al contacto parta que abra en una pagina nueva
+añadir text-align: center; en el body
+cambiar medidas absolutas a relativas
+https://desarrolloweb.com/articulos/unidades-medida-css-relativas-absolutas.html
+en la seccion 3 aplicar  margin-top:-1%;
+agregar en .promociones img{  height: 20rem;  } para ajustar la altura igual a todas las imagenes
+*/
+
+.hero-section {
+    text-align: right;
+    background-image: url('../img/hero_seccion.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #ffffff;
+    text-shadow: 0.125em 0.25em 0.125em #707070;
+    padding: 12.25rem 3.125rem;
+  }
+
+  .promociones{
+    display: inline-block;
+    
+
+  }
+
+
+  /*********EDICION DE IMAGENES***********/
+
+div { text-align: center;}
+
+img { 
+  /*margin: 40px; */
+  display: inline-block;
+  
+}
+h3 { display: inline-block; padding: 30px;}
+/*.drop { filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 1)); }
+.box {   box-shadow: 0 0 15px rgba(0, 0, 0, 1); }
+.text {   text-shadow: 0 0 10px rgba(0, 0, 0, 0.76); } */
+.drop {filter: drop-shadow(0 10px 15px #0a2635);}
+.box {   box-shadow: 0 0 15px #0e3347; }
+.text {   text-shadow: 0 0 10px #042231; }
+nav {
+    z-index: 100
+}
+
+
+#ubicacion{
+    display: grid;
+grid-template-columns: repeat(4, 1fr);
+grid-template-rows: 1fr;
+grid-column-gap: 56px;
+grid-row-gap: 46px;
+margin-left: 30%;
+}
+
+.tituloMapa{
+    margin-bottom: 0.5em;
+}
+
+
+
+#textoMapa{
+    text-align: right;
+}
+
+#seccion5{
+    margin-top: 2em;      
+    margin-bottom: 2em;
+    background-color: #D8D2CB;
+    padding-top: 1%;
+    padding-bottom: 3%;
+}
+
+
+.owl-carousel {
+    background-color: #1C658C;
+}
+
+#redondeada{
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+}

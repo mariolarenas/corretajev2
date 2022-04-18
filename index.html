@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Corredora de Propiedades</title>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="./assets/img/icono.png" type="image/png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Mario Larenas" />
+    <meta name="description" content="Venta y Arriendo de propiedades" />
+    <meta
+      name="keywords"
+      content="casa, propiedad, arriendo, departamento, venta"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!--owlcarousel-->
+    <link rel="stylesheet" href="./assets/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">    
+    <link
+      href="https://fonts.googleapis.com/css2?family=Coming+Soon&family=Open+Sans:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class="f_oscuro">
+        <ul>
+			<li class="icono"><a href="#inicio">
+				<img class="logo drop"src="./assets/img/logo.png" alt="Logo de Propiedades" >
+			</a></li>
+			<li><a class="text"  href="#seccion1">Principal</a></li>
+			<li><a class="text"href="#seccion2">Nosotros</a> </li>
+			<li><a class="text"href="#seccion3">Informaciones</a></li>
+			<li><a class="text"href="#seccion_casas">Promociones</a></li>
+      <li><a class="text"href="#seccion5">Ubicanos</a></li>´
+       <!-- Button trigger modal I. Económicos-->
+       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#economicos"> I. Económicos </button>
+      <!-- Button trigger modal Feriados 2022-->
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#feriados"> Feriados Chile 2022 </button>
+			</ul>
+    </nav>
+
+   
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#economicos"> Económicos </button>
+
+<!-- Modal Indices Economicos-->
+<div class="modal fade" id="economicos" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">MSLR</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!--Contenido del Modal Indices Económicos-->
+          <h1>Valores Económicos del día <span id="fecha"></span></h1>
+          <div class="row">
+          <div class="col-12">
+          <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Indicador</th>
+                  <th scope="col">Valor</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>UF</td>
+                  <td id="UF"></td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Dolar Observado</td>
+                  <td id="DolarO"></td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Dolar de Acuerdo</td>
+                  <td id="DolarA"></td>
+                </tr>
+                <tr>
+                  <th scope="row">4</th>
+                  <td>Euro</td>
+                  <td id="Euro"></td>
+                </tr>
+                <tr>
+                  <th scope="row">5</th>
+                  <td>IPC</td>
+                  <td id="IPC"></td>
+                </tr>
+                <tr>
+                  <th scope="row">6</th>
+                  <td>UTM</td>
+                  <td id="UTM"></td>
+                </tr>
+                <tr>
+                  <th scope="row">7</th>
+                  <td>IVP</td>
+                  <td id="IVP"></td>
+                </tr>
+                <tr>
+                  <th scope="row">8</th>
+                  <td>Imacec</td>
+                  <td id="Imacec"></td>
+                </tr>
+                <tr>
+                  <th scope="row">9</th>
+                  <td>Desempleo</td>
+                  <td id="Desempleo"></td>
+                </tr>
+                <tr>
+                  <th scope="row">10</th>
+                  <td>Bitcoin</td>
+                  <td id="Bitcoin"></td>
+                </tr>
+      
+              </tbody>
+            </table>
+          </div>
+          </div>
+         
+      <!--Fin Contenido del Modal Indices Económicos-->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+       
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Fin Modal Indices Economicos-->
+
+    <!-- Modal Feriados Chile 2022-->
+    <div class="modal fade" id="feriados" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">MSLR</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <!--Contenido del Modal Feriados Chile 2022-->
+            <h1 class="text-center">Feriados Chile 2022</h1>
+            <table class="table ">
+             <thead>
+              <tr>
+                <th scope="col">Fecha</th>
+                <th scope="col">Nombre</th>
+               <th scope="col">Irrenunciable</th>
+               <th scope="col">Tipo</th>
+             </tr>
+             </thead>
+             <tbody></tbody>
+           </table>
+          
+          <!--Fin Contenido del Modal Feriados Chile 2022-->
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+     <!-- Fin Modal Feriados Chile 2022-->
+
+
+    <header id="seccion1" class="hero-section">
+        <h1 class="drop">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae, at!</h1>
+        <h2 class="subtitulo">Lorem ipsum dolor sit amet.</h2>
+    </header>
+
+    <!--carrusel de owlcarrousel-->
+    <div class="owl-carousel owl-theme pt-5">
+        <div class="item drop"><img src="http://placeimg.com/640/480/people" alt="imgen de gente" ></div>
+        <div class="item drop"><img src="http://placeimg.com/640/480/animals" alt="" ></div>
+        <div class="item text"><img src="http://placeimg.com/640/480/arch" alt="" ></div>
+        <div class="item text"><img src="http://placeimg.com/640/480/nature" alt="" ></div>
+        <div class="item box"><img src="http://placeimg.com/640/480/nature/grayscale" alt=""></div>
+        <div class="item box"><img src="http://placeimg.com/640/480/people" alt="imgen de gente" ></div>
+        <div class="item box"><img src="http://placeimg.com/640/480/animals" alt="" ></div>
+        <div class="item box"><img src="http://placeimg.com/640/480/arch" alt="" ></div>
+        <div class="item box"><img src="http://placeimg.com/640/480/nature" alt="" ></div>
+        <div class="item box"><img src="http://placeimg.com/640/480/nature/grayscale" alt=""></div>
+    </div>
+    
+    <div class="csvg">
+        <svg class="drop" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#1C658C" fill-opacity="1" d="M0,160L1440,256L1440,0L0,0Z"></path></svg>
+    </div>
+
+<section id="seccion2" class="text-center">
+    <img class="box" src="./assets/img/casa01.jpg" alt="Casa 01">
+    <h2 class="text">Lorem ipsum dolor sit amet.</h2>
+    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, quos?</p>
+
+</section>
+
+<div class="csvg">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#1C658C" fill-opacity="1" d="M0,160L1440,256L1440,320L0,320Z"></path></svg>
+</div>
+
+<section id="seccion3" class="seccion3">
+
+  <div class="row">
+
+    <div class="col-sm-12 col-md-6 ">  
+         <img class="drop" id="redondeada" src="./assets/img/casa01.jpg" alt="imagen xxx" width="400">
+         <div class="informacion">
+             <h2 class="text">Lorem, ipsum.</h2>
+             <h3 class="box">Lorem, ipsum dolor.</h3>
+             <h4 class="drop">Lorem, ipsum dolor.</h4>
+             <h5>Lorem, ipsum dolor.</h5>
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, nisi?</p>
+
+         </div>
+    </div>
+
+    <div class="col-sm-12 col-md-6 drop">  
+      <iframe width="460" height="315"
+       src="https://www.youtube.com/embed/71_cMqixe8U"
+        title="YouTube video player"
+        frameborder="122"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+
+
+    </div>
+
+  </div>
+</section>
+
+<section id="seccion_casas" class="container">
+
+  <h2 class="text text-center pt-5 pb-5">Articulos</h2>
+  <!--Tamañops de boostrap 5.1
+
+    xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+
+-->
+  <div class="row">
+
+     <div class="col-sm-12 col-md-6 col-lg-4 col-xxl-3">
+        <div class="card" style="width: 18rem;">
+            <img src="./assets/img/casa03.jpg" class="card-img-top box promociones" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Casa 01</h5>
+              <p class="card-text drop">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+             <!-- Button trigger modal casa 1-->
+             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#casa_uno">
+                Mas Información
+                </button>
+            </div>
+          </div>
+     </div>
+
+     <div class="col-sm-12 col-md-6 col-lg-4 col-xxl-3">
+        <div class="card" style="width: 18rem;">
+            <img src="./assets/img/casa02.jpg" class="card-img-top box promociones" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Casa 02</h5>
+              <p class="card-text drop">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <!-- Button trigger modal casa 2-->
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#casa_dos">
+                Mas Información
+            </button>
+            </div>
+          </div>
+     </div>
+
+     <div class="col-sm-12 col-md-6 col-lg-4 col-xxl-3">
+        <div class="card" style="width: 18rem;">
+            <img src="./assets/img/casa03.jpg" class="card-img-top box promociones" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Casa 03</h5>
+              <p class="card-text drop">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+               <!-- Button trigger modal casa 3-->
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#casa_tres">
+              Mas Información
+              </button>
+            </div>
+          </div>
+     </div>
+
+     <div class="col-sm-12 col-md-6 col-lg-4 col-xxl-3">
+        <div class="card" style="width: 18rem;">
+            <img src="./assets/img/casa02.jpg" class="card-img-top box promociones" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Casa 04</h5>
+              <p class="card-text drop">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <!-- Button trigger modal casa 4-->
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#casa_cuatro">
+                Mas Información
+                </button>
+            </div>
+          </div>
+     </div>
+
+  </div>
+
+</section>
+
+<!-- Modal Casa 1-->
+<div class="modal fade" id="casa_uno" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Modal casa 1</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+         <img src="http://placeimg.com/300/300/arch" alt="Imagen xxx" srcset="" width="100%">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, distinctio deserunt totam dolorum sed numquam temporibus amet quas, sint excepturi velit soluta! Mollitia, necessitatibus nihil. Odit, vel aspernatur! Beatae, ducimus? Sit et cupiditate maxime error, dolores nisi voluptatum! Amet ea perspiciatis numquam enim ratione a facilis atque nulla labore laudantium iure, ipsam sunt dolor eum aut tempore deleniti libero hic unde quod quo iusto et ducimus. Fugiat reprehenderit et dicta iste assumenda deserunt porro aspernatur nihil? Neque sed atque enim, sequi voluptate nihil! Ex qui, sapiente ut dolorem labore cumque possimus assumenda nisi voluptate excepturi culpa tempore nostrum dolor eius.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal casa 2-->
+<div class="modal fade" id="casa_dos" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Modal casa 2</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, distinctio deserunt totam dolorum sed numquam temporibus amet quas, sint excepturi velit soluta! Mollitia, necessitatibus nihil. Odit, vel aspernatur! Beatae, ducimus? Sit et cupiditate maxime error, dolores nisi voluptatum! Amet ea perspiciatis numquam enim ratione a facilis atque nulla labore laudantium iure, ipsam sunt dolor eum aut tempore deleniti libero hic unde quod quo iusto et ducimus. Fugiat reprehenderit et dicta iste assumenda deserunt porro aspernatur nihil? Neque sed atque enim, sequi voluptate nihil! Ex qui, sapiente ut dolorem labore cumque possimus assumenda nisi voluptate excepturi culpa tempore nostrum dolor eius.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal casa 3-->
+<div class="modal fade" id="casa_tres" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Modal casa 3</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, distinctio deserunt totam dolorum sed numquam temporibus amet quas, sint excepturi velit soluta! Mollitia, necessitatibus nihil. Odit, vel aspernatur! Beatae, ducimus? Sit et cupiditate maxime error, dolores nisi voluptatum! Amet ea perspiciatis numquam enim ratione a facilis atque nulla labore laudantium iure, ipsam sunt dolor eum aut tempore deleniti libero hic unde quod quo iusto et ducimus. Fugiat reprehenderit et dicta iste assumenda deserunt porro aspernatur nihil? Neque sed atque enim, sequi voluptate nihil! Ex qui, sapiente ut dolorem labore cumque possimus assumenda nisi voluptate excepturi culpa tempore nostrum dolor eius.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal casa 4-->
+<div class="modal fade" id="casa_cuatro" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Modal casa 4</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, distinctio deserunt totam dolorum sed numquam temporibus amet quas, sint excepturi velit soluta! Mollitia, necessitatibus nihil. Odit, vel aspernatur! Beatae, ducimus? Sit et cupiditate maxime error, dolores nisi voluptatum! Amet ea perspiciatis numquam enim ratione a facilis atque nulla labore laudantium iure, ipsam sunt dolor eum aut tempore deleniti libero hic unde quod quo iusto et ducimus. Fugiat reprehenderit et dicta iste assumenda deserunt porro aspernatur nihil? Neque sed atque enim, sequi voluptate nihil! Ex qui, sapiente ut dolorem labore cumque possimus assumenda nisi voluptate excepturi culpa tempore nostrum dolor eius.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+
+<section id="seccion5" class="box">
+
+    <h2 class="tituloMapa"> Nuestra Ubicación:</h2>
+    <div id="ubicacion">
+        <iframe class="drop"
+        title="Ubicación"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d102197.9814143176!2d-73.10308560391319!3d-36.826021560657765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9669b5cdd2bbc63b%3A0x44cb37b752212698!2zQ29uY2VwY2nDs24sIELDrW8gQsOtbw!5e0!3m2!1ses-419!2scl!4v1648667579499!5m2!1ses-419!2scl"
+        width="500"
+        height="350"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+        <div id="textoMapa">
+        <h3 class="text">Titulo</h3>
+        <p class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi placeat, impedit error fuga modi, consectetur possimus omnis non nesciunt iure porro quos architecto. Vero quae, aliquid odio error facere voluptates.</p>
+        </div>
+     </div>
+
+</section>
+
+<footer id="contacto" class="f_oscuro box text-center">
+        <a href="https://github.com"><i class="fab fa-github-square fa-4x drop"></i></a>
+        <a href="https://twitter.com"><i class="fab fa-twitter-square fa-4x drop"></i></a>
+        <a href="https://www.linkedin.com"><i class="fab fa-linkedin fa-4x drop"></i></a>
+        <p>Página web Propiedades. Todos los derechos reservados MSLR 2022</p>
+</footer>
+
+<!--owlcarrousel JQuery-->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="./assets/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+<!--Script Propio-->
+<script src="./assets/js/index.js"></script>
+<script src="./assets/js/economicos.js"></script>
+<script src="./assets/js/feriados.js"></script>
+<!--Scripot Boostrap JQuery-->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+</body>
+</html>
